@@ -1,6 +1,7 @@
 import 'package:barcodeapp/user/cart.dart';
 import 'package:barcodeapp/user/productbarcodescan.dart';
 import 'package:barcodeapp/user/scan.dart';
+import 'package:barcodeapp/user/venderprofile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -143,9 +144,18 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+              const SizedBox(height: 200,),
+
+              ElevatedButton(onPressed: (){
+          Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Venderprofile()),
+                );
+        }, child: const Text('Continue to vender screen'),)
             ],
           ),
         ),
+        
       ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.blue,  // Customize selected item color
